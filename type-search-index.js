@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"com.cwa.crud_springboot","l":"CrudSpringbootApplication"},{"p":"com.cwa.crud_springboot","l":"Produit"},{"p":"com.cwa.crud_springboot","l":"ProduitController"},{"p":"com.cwa.crud_springboot","l":"ProduitRepository","k":"10"}];updateSearchResults();
