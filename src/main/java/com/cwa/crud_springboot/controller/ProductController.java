@@ -24,4 +24,10 @@ public class ProductController {
         return service.findById(id);
     }
 
+    @PostMapping
+    public Product create(@RequestBody Product product) {
+        return service.save(product);
+    }
+
+   
 }
