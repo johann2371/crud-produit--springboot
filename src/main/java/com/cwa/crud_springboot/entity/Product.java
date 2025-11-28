@@ -10,7 +10,8 @@ import lombok.*;
 @NoArgsConstructor
 public class Product {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
    @Schema(description = "identifiant unique" , example="1")
     private Long id;

@@ -32,8 +32,8 @@ public class OpenApiConfig {
                 .title("API de Gestion de Produits")
                 .version("1.0.0")
                 .contact(contact)
-                .description("Cette API permet de gérer un catalogue de produits avec des opérations CRUD complètes.")
-                .termsOfService("https://www.iuc.com/terms")
+                .description("API DE GESTION DE PRODUITS .")
+                .termsOfService("https://www.iuc.com/EADL")
                 .license(license);
 
         return new OpenAPI()

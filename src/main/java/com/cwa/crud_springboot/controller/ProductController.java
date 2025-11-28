@@ -24,7 +24,10 @@ public class ProductController {
             summary="Lister toute les taches",
             description="obtenir la liste de tout les produits"
     )
-    @ApiResponse(responseCode="200", description="Liste récupérer avec sucess")
+    @ApiResponses({
+            @ApiResponse(responseCode="200", description="Liste récupérer avec sucess"),
+            @ApiResponse(responseCode = "400",description = "aucune liste dans la bd")
+    })
 
     public List<Product> getAll() {
         return service.findAll();
@@ -58,12 +61,14 @@ public class ProductController {
         return service.save(product);
     }
 
-    @Operation(description = "rechercher un produit par l'id")
-    @ApiResponses({
-            @ApiResponse(responseCode="200",description="produit trouvé"),
-            @ApiResponse(responseCode = "400",description = "produit itrouvable")
-    })
 
+    @Operation(summary = "modifier une produit en fonction de son id")
+    @ApiResponses({
+
+            @ApiResponse(responseCode = "200",description = "produit trouvé et modifer avec success"),
+            @ApiResponse(responseCode = "400",description = "produit non trouvé")
+
+    })
     @PutMapping("/{id}")
     public Product update( @Parameter(description = "id du produit que l'on recherche") @PathVariable Long id, @RequestBody Product product) {
         return service.update(id, product);
