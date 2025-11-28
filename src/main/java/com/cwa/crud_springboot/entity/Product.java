@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
+@Table(name = "product") 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,16 +13,15 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-   @Schema(description = "identifiant unique" , example="1")
+    @Schema(description = "Identifiant unique", example = "1")
     private Long id;
 
-    @Schema(description="nom de produit" , example="bonbon")
+    @Schema(description = "Nom du produit", example = "Bonbon")
     private String name;
 
-    @Schema(description = "prix du produit", example = "1000f")
+    @Schema(description = "Prix du produit", example = "1000f")
     private double price;
 
-   @Schema(description = "quantité en stock")
+    @Schema(description = "Quantité en stock", example = "10")
     private int quantity;
 }
